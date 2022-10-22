@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="regression suite">
+    <test name="Selenium test">
+        <classes>
+            <class name ="com.cydeo.tests.day6_alert_iframe_windows.T5_Window_Practice"></class>
+        </classes>
+    </test>
+
+</suite>
