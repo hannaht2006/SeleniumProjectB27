@@ -18,6 +18,7 @@ public class T1_2_SmartBear extends TestBase {
      //    2. Go to website:
 //    http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx
      driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx ");
+
 //3. Enter username: “Tester”
      WebElement userName = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_username']"));
      userName.sendKeys("Tester");
@@ -28,6 +29,7 @@ public class T1_2_SmartBear extends TestBase {
      WebElement password = driver.findElement(By.xpath("//input[@name='ctl00$MainContent$password']"));
      password.sendKeys("test");
      BrowserUtils.sleep(1);
+
      //5. Click to Login button
      WebElement loginBtn = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_login_button']"));
      loginBtn.click();

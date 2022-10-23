@@ -7,13 +7,16 @@ import org.testng.annotations.Test;
 public class Singleton_driver_test {
 
     //with using singleton driver we will not be calling 'driver' itself anymore
-    //we will be calling driver with" Diver.getDriver()"
+    //we will be calling driver with" Driver.getDriver()"
+
+    //we use "Driver.getDriver()" now instead of "driver"
 
     @Test (priority = 1)
     public void googleTitle(){
         Driver.getDriver().get("https://google.com");
         System.out.println("google test driver = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
 
+         Driver.closeDriver();
     }
 
     @Test (priority = 2)

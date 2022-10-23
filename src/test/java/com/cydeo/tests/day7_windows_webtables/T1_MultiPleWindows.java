@@ -65,7 +65,7 @@ public class T1_MultiPleWindows {
 //     expectedTitle = "Cydeo";
 //     Assert.assertEquals(actualTitle,expectedTitle);
 
-     BrowserUtils.verifyTitle(driver, "Cydeo");
+     BrowserUtils.verifyTitle( "Cydeo");
  }
 
  @AfterMethod

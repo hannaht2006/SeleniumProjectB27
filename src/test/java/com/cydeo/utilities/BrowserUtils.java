@@ -1,6 +1,8 @@
 package com.cydeo.utilities;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class BrowserUtils {
@@ -28,10 +30,22 @@ public class BrowserUtils {
     //• Arg2: String expectedTitle
     //BrowserUtils.verifyTitle(driver,"Google")
 
-    public static void verifyTitle(WebDriver driver,String expectedTitle) {
-        String actualTitle = driver.getTitle();
+    public static void verifyTitle(String expectedTitle) {
+
+        // replacing driver ---> Driver.getDriver()
+        String actualTitle = Driver.getDriver().getTitle();
 
         Assert.assertEquals(actualTitle, expectedTitle);
 
+    }
+
+    public static void waitForInvisibilityOf(WebElement element){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+    public static void waitForVisibilityOf(WebElement element){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
+        wait.until(ExpectedConditions.invisibilityOf(element));
     }
 }

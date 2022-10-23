@@ -8,7 +8,7 @@ public class ConfigurationReader {
 
     //1. Create the object of properties class
     //we need properties class to use method coming from: getProperties("key"); load();
-    //it is static because we use it in static method
+    //it is static because we use it in static block
     // it is private because i will be using only in this class
     private static Properties properties = new Properties();
 
@@ -43,6 +43,7 @@ public class ConfigurationReader {
      * driver.get(ConfigurationReader.getProperty("env"))
      */
     public static String getProperty(String keyword){
+
         return properties.getProperty(keyword);
     }
 }

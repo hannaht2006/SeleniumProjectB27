@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class Driver {
 
     //creating a private constructor, we are closing access to the object of this class from outside
@@ -16,7 +14,7 @@ public class Driver {
     private static WebDriver driver;
 
     /*
-    creating re-useable utility method which same driver instance when we call it
+    creating re-usable utility method which same driver instance when we call it
      */
     public static WebDriver getDriver(){
 
@@ -30,20 +28,27 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                  break;
 
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
 
             }
         }
         //same driver instance will be return every time we call Driver.getDriver() method
         return driver;
+    }
+
+    public static void closeDriver(){
+        if(driver!= null){
+            driver.quit(); //this line will kill the session. value will now be null
+            driver = null;
+        }
     }
 
 }
