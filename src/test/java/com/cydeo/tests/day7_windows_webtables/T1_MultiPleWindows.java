@@ -56,6 +56,23 @@ public class T1_MultiPleWindows {
 
          if(driver.getTitle().equals("Cydeo")){//stop at Cydeo page for working on this page
              break;
+/*
+
+open driver:
+WebDriverManager.chromedriver().setup();
+WebDriver driver = new ChromeDriver();
+driver.manage().window().maximum();
+driver.get("https");
+
+String currentWindow = driver.getWindowHandle();
+
+Set<String> windows = drive.getWindowHandles();
+for(String eachWindow:windows){
+driver.switchTo().window(eachWindow);
+if(driver.getTitle().equals("windowName")){
+break;
+}
+ */
          }
      }
 

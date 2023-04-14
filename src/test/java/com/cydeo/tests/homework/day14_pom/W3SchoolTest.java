@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class W3SchoolTest {
+
     @Test
     public void double_click_me_test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("w3school.url"));

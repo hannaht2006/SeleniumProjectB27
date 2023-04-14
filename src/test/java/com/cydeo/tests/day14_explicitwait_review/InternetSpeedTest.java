@@ -16,6 +16,7 @@ public class InternetSpeedTest {
 
 //3- Wait until Results link is displayed
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 40);
+
         InternetSpeedPage internetSpeedPage = new InternetSpeedPage();
 
         wait.until(ExpectedConditions.visibilityOf(internetSpeedPage.resultLink));

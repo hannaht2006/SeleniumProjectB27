@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class InternetSpeedPage {
 
     public InternetSpeedPage(){
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 //if you have white spaces in your locator's content(text) in HTML, you use"normalize-space()" for text of elements

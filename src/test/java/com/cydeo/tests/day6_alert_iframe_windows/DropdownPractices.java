@@ -42,7 +42,8 @@ public class DropdownPractices {
 
         //6. Verify final selected option is California.
 
-        String actualFinalOption = selectState.getFirstSelectedOption().getText();//using getFirstSelectedOption() to get current selection option in the dropdown list
+        String actualFinalOption = selectState.getFirstSelectedOption().getText();//using getFirstSelectedOption() to
+        // get current selection option in the dropdown list
 
         String expectedFinalOption ="California";
 

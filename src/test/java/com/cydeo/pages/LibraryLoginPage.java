@@ -11,7 +11,7 @@ public class LibraryLoginPage {
     public LibraryLoginPage(){
         /*
         PageFactory class is a selenium class that support POM
-        it has method called initElements. once it's called it will store all elements specified using @FindBy annotation with locator and i will give elements to the class when they called
+        it has method called initElements. once it's called it will store all elements specified using @FindBy annotation with locator and it will give elements to the class when they called
 
         initElements method accept 2 arguments :
         - WebDriver instance and Page class instance(this) means current instance of this class
@@ -19,6 +19,7 @@ public class LibraryLoginPage {
        PageFactory.initElements(Driver.getDriver(),this);// if you don't have this line, when you run test case , will throw nullPointException
 
     }
+
 //located WebElement by @FindBy annotation
     // to make these WebElements below to be accessible from test class --> use public keyword
 
@@ -41,7 +42,7 @@ public class LibraryLoginPage {
     public WebElement wrongEmailAndPasswordErrorMsg;
 
 
-    //extra explaination to understand the argument "this" :
+    //extra explanation to understand the argument "this" :
 //    int num;
 //    public void testing(int anothernum){
 //        this.num = anothernum;

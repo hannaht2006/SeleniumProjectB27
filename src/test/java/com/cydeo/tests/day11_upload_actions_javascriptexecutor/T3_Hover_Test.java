@@ -31,6 +31,7 @@ public class T3_Hover_Test {
 
         Actions act = new Actions(Driver.getDriver());
 
+
         //  2. Hover over to first image
         act.moveToElement(image1).pause(1000).perform();
 
